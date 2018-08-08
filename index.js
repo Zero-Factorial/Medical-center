@@ -17,7 +17,7 @@ app.use('/medical', require('./routes/doctors'));
 app.use('/medical', require('./routes/staffs'));
 app.use('/medical', require('./routes/treatments'));
 app.use('/medical', require('./routes/tests'));
-//app.use('/medical', require('./routes/schedules'));
+app.use('/medical', require('./routes/schedules'));
 
 
 app.use(function(err,req,res,next){
