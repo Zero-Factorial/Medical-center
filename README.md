@@ -1,5 +1,4 @@
-FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+
 
 # Medical Center
 
@@ -11,15 +10,17 @@ You can get your own data using this action. It takes a JSON object containing a
 
 + Response 200 (application/json)
 
+```
 [
-    {
+   {
         "available": true,
         "_id": "5b69943f909a720728b2fa2e",
         "name": "Abdus Salam",
         "specialist": "Cardiologist",
         "__v": 0,
         "time_schedule": "4pm ---6pm"
-    },
+    }
+    ],
     {
         "available": true,
         "_id": "5b6994a5909a720728b2fa2f",
@@ -72,95 +73,11 @@ You can get your own data using this action. It takes a JSON object containing a
         "name": "Abdus Salam",
         "specialist": "Cardiologist",
         "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b6996a1909a720728b2fa34",
-        "name": "Humayon Kabir",
-        "specialist": "Anesthesiologist",
-        "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b6996e1909a720728b2fa35",
-        "name": "Ahsan Kabir",
-        "specialist": "Allergist",
-        "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b69c2494e8c971024d7cca6",
-        "name": "Medicine-Dept.",
-        "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b69c2784e8c971024d7cca7",
-        "name": "Surgery-Dept.",
-        "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b69c2834e8c971024d7cca8",
-        "name": "Oral-Dept.",
-        "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b69c2c04e8c971024d7cca9",
-        "name": "Gynecology-Dept.",
-        "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b69be174e8c971024d7cca2",
-        "name": "Blood test",
-        "__v": 0,
-        "expense": "250 tk"
-    },
-    {
-        "available": false,
-        "_id": "5b69be7f4e8c971024d7cca3",
-        "name": "Magnetic Resonance Imaging (MRI)",
-        "__v": 0,
-        "expense": "2000 tk"
-    },
-    {
-        "available": true,
-        "_id": "5b69bebd4e8c971024d7cca4",
-        "name": "Colonoscopy",
-        "__v": 0,
-        "expense": "2500 tk"
-    },
-    {
-        "available": true,
-        "_id": "5b698775fb15f003d8971dc8",
-        "name": "Ashraful",
-        "rank": "office secretary",
-        "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b69c49e4e8c971024d7ccaa",
-        "name": "Mahbubul alam",
-        "rank": "Register",
-        "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b69c4c64e8c971024d7ccab",
-        "name": "Zillur Rahman",
-        "rank": "Compounder",
-        "__v": 0
-    },
-    {
-        "available": true,
-        "_id": "5b69c4e94e8c971024d7ccac",
-        "name": "Mehedi Hasan",
-        "rank": "Clark",
-        "__v": 0
     }
+  
 ]
+```
+
 
 ### GetSpecificDataInformation [GET/medical/tests/5b69be174e8c971024d7cca2]
 You can get your own data using this action. It takes a JSON
@@ -168,7 +85,7 @@ object containing a question and a collection of answers in the
 form of choices.
 
 + Response 200 (application/json)
-
+```
 [
     {
         "available": true,
@@ -178,6 +95,8 @@ form of choices.
         "expense": "250 tk"
     }
 ]
+
+```
 
 ### PostData [POST/medical/tests]
 
@@ -186,7 +105,7 @@ object containing a question and a collection of answers in the
 form of choices.
 
 + Request 200 (application/json)
-
+```
 [
     {
         "available": true,
@@ -194,34 +113,26 @@ form of choices.
         "expense": "700 tk"
     }
 ]
+```
 
 ###UpdateDataInformation [PATCH/medical/doctors/5b69be7f4e8c971024d7cca3]
 
 You can update your own question using this action.
 
 + Request 200 (application/json)
+```
 
 {
     "expense": "500 tk"   
 }
+```
 
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /medical/doctors
-
-    + Body
-
-{
-
-}
 
 ###DELETEdata [DELETE/medical/tests/5b69be174e8c971024d7cca2]
 You can delete data from the database using this action.
 
 + Response 200 (application/json)
-
+```
 [
  {
     "OHH": {
@@ -229,3 +140,5 @@ You can delete data from the database using this action.
     }
 }
 ]
+
+```
